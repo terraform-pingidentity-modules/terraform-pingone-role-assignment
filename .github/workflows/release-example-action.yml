@@ -27,8 +27,9 @@ jobs:
           for dir in examples/*; do
             # Check if it's a directory
             if [ -d "$dir" ]; then
+              exampleName="$(basename "$dir")"
               # Create a zip file for each directory
-              zip -r "${dir}.zip" "$dir"
+              zip -r "examples/example-${exampleName}.zip" "$dir"
             fi
           done
 
