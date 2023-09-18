@@ -13,14 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: 14
-
-      # - name: Install dependencies
-      #   run: npm install
-
       - name: Create Zip Files
         run: |
           # Loop through the directories in the "examples" directory
@@ -29,6 +21,7 @@ jobs:
             if [ -d "$dir" ]; then
               exampleName="$(basename "$dir")"
               # Create a zip file for each directory
+              echo "Creating zip ($dir --> example-${exampleName}.zip)"
               zip -r "examples/example-${exampleName}.zip" "$dir"
             fi
           done
