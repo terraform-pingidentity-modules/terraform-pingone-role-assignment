@@ -28,7 +28,7 @@ jobs:
             # Check if it's a directory
             if [ -d "$dir" ]; then
               # Create a zip file for each directory
-              zip -r "example-${dir}.zip" "$dir"
+              zip -r "${dir}.zip" "$dir"
             fi
           done
 
