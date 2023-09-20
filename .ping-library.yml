@@ -2,15 +2,22 @@
 # IF this files is missing, then no Ping Library items will be created
 #
 
-items:
-  example-users:
-    on: "check-suite"    # or push or pull request or ???
-    name: "Terraform Role Assignment Module Example"
-    short-description: "This is the card short description"
-    long-description: "This is the longer description.  It is optional and if not, set, the short-description will be shown"
-    terraform-module:
-      base-path: "examples/users"                                 # base path of the example files
-      include-files: ["main.tf", "subdir2/providers.tf"]          # list of files to include. DEFAULT: list eveything (main.tf if found (expanded), is first, and then alphabetical)
+example-item1:
+  on:
+    event: "check_suite"     # compares to X-GitHub-Event: check_suite
+      action: "completed"    # compares to payload: action: completed
+      
+  item:
+    title: "Terraform Role Assignment Module Example"
+    content:
+      description: "This is the card short description"
+      html: "This is the longer description.  It is optional and if not, set, the short-description will be shown"
+    metadata:
+      alias: "tm-example-users"
+      
+  terraform-module:    
+    base-path: "examples/users"                                 # base path of the example files
+    include-files: ["main.tf", "subdir2/providers.tf"]          # list of files to include. DEFAULT: list eveything (main.tf if found (expanded), is first, and then alphabetical)
     
 
 #code:
