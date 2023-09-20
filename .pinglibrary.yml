@@ -13,6 +13,7 @@ example-item1:
       description: "This is the card short description"
       html: "This is the longer description.  It is optional and if not, set, the short-description will be shown"
     metadata:
+      contentType: "terraform-module"
       alias: "tm-example-users"
       
   terraform-module:    
