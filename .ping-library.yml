@@ -5,7 +5,7 @@
 example-item1:
   on:
     event: "check_suite"     # compares to X-GitHub-Event: check_suite
-      action: "completed"    # compares to payload: action: completed
+    action: "completed"      # compares to payload: action: completed
       
   item:
     title: "Terraform Role Assignment Module Example"
