@@ -1,0 +1,21 @@
+items:
+  users:
+    name: "Terraform Role Assignment Module Example"
+    short-description: "This is the card short description"
+    long-description: "This is the longer description.  It is optional and if not, set, the short-description will be shown"
+  
+    show-all-files: false                       # true or false - DEFAULT: false
+    hide-all-files: false                       # true or false - DEFAULT: true
+    include-files: ["main.tf", "providers.tf"]  # list of files to include. Default [] - Overrides show/hide files
+    exclude-files: ["exluded-file.tf"]          # list of files to exclude. Default [] - Overrides show/hide files
+
+
+  example2:
+    name: "Example2"
+    short-description: "This is the card short description"
+    long-description: "This is the longer description.  It is optional and if not, set, the short-description will be shown"
+  
+    show-all-files: false                       # true or false - DEFAULT: false
+    hide-all-files: false                       # true or false - DEFAULT: true
+    include-files: ["main.tf"]                  # list of files to include. Default [] - Overrides show/hide files
+    exclude-files: []                           # list of files to exclude. Default [] - Overrides show/hide files
