@@ -20,7 +20,7 @@ example-item1:
     base-path: "examples/users"                                 # base path of the example files
     include-files: ["main.tf", "subdir2/providers.tf"]          # list of files to include. DEFAULT: list eveything (main.tf if found (expanded), is first, and then alphabetical)
     
-
+ 
 #code:
 #collection:
 #dvcomponent:
